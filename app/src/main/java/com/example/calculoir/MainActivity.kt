@@ -1,47 +1,33 @@
 package com.example.calculoir
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.calculoir.ui.theme.CalculoIRTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            CalculoIRTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
-    }
-}
+        setContentView(R.layout.main_activity)
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+        val edRenda = findViewById<EditText>(R.id.edRenda)
+        val edDependentes = findViewById<EditText>(R.id.edDependentes)
+        val edDeducoes = findViewById<EditText>(R.id.edDeducoes)
+        val btCalcularIR = findViewById<Button>(R.id.btCalcularIR)
+        val tvRendaAnual = findViewById<TextView>(R.id.tvRendaAnual)
+        val tvBaseCalculo = findViewById<TextView>(R.id.tvBaseCalculo)
+        val tvImpostoDevido = findViewById<TextView>(R.id.tvImpostoDevido)
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CalculoIRTheme {
-        Greeting("Android")
+
+
+
+
+
+
+
+
+
+
     }
 }
