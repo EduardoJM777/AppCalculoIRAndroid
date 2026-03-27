@@ -20,13 +20,30 @@ class MainActivity : ComponentActivity() {
         val tvImpostoDevido = findViewById<TextView>(R.id.tvImpostoDevido)
 
 
+        btCalcularIR.setOnClickListener {
+
+            val renda = edRenda.text.toString().toDoubleOrNull() ?: 0.0
+            val rendaAnual = renda * 12
+            tvRendaAnual.text = "R$ $rendaAnual"
+
+            val dependentes = edDependentes.text.toString().toDoubleOrNull() ?: 0.0
+            val deducaoDepen = dependentes * 300 * 12
+
+            val totDeducoes = edDeducoes.text.toString().toDoubleOrNull() ?: 0.0
+
+            val baseDeCalculo = rendaAnual - (deducaoDepen + totDeducoes)
+            tvBaseCalculo.text = "R$ $baseDeCalculo"
+
+            when {
+                baseDeCalculo < 18000 -> tvImpostoDevido.text = "R$ 0"
+                baseDeCalculo > 18000 && baseDeCalculo < 27000 ->
+                    tvImpostoDevido.text = "R$ ${(baseDeCalculo - 18000) * 0.15}"
+                baseDeCalculo > 27000 ->
+                    tvImpostoDevido.text = "R$ ${1350 + ((baseDeCalculo - 27000) * 0.275)}"
+            }
 
 
-
-
-
-
-
+        }
 
 
     }

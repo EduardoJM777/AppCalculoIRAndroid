@@ -18,6 +18,7 @@
         android:text="Renda Bruta Mensal:"
         android:textSize="15sp"
         android:layout_marginTop="15dp"
+        android:textColor="@color/black"
     />
 
     <EditText
@@ -31,6 +32,7 @@
         android:layout_height="wrap_content"
         android:text="Dependentes:"
         android:textSize="15sp"
+        android:textColor="@color/black"
     />
 
     <EditText
@@ -44,6 +46,7 @@
         android:layout_height="wrap_content"
         android:text="Total Deduções (saúde, educação, etc)"
         android:textSize="15sp"
+        android:textColor="@color/black"
     />
 
     <EditText
@@ -78,7 +81,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Renda Bruta Anual:"
-                android:textSize="15sp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
             />
 
             <TextView
@@ -86,7 +90,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/tvRendaAnual"
-                android:textSize="15sp"
+                android:textSize="25sp"
+                android:textColor="@color/black"
             />
     </LinearLayout>
 
@@ -101,7 +106,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Base de Calculo:"
-            android:textSize="15sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
             />
 
         <TextView
@@ -109,7 +115,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:id="@+id/tvBaseCalculo"
-            android:textSize="15sp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
             />
     </LinearLayout>
 
@@ -124,7 +131,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Imposto Devido:"
-            android:textSize="15sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
             />
 
         <TextView
@@ -132,7 +140,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:id="@+id/tvImpostoDevido"
-            android:textSize="15sp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
             />
     </LinearLayout>
 
